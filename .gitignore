@@ -6,11 +6,3 @@ __pycache__/
 .venv
 .envrc
 *.DS_Store
-outputs/*
-!outputs/.gitkeep
-!outputs/raw/
-!outputs/raw/.gitkeep
-!outputs/curated/
-!outputs/curated/.gitkeep
-!outputs/charts/
-!outputs/charts/.gitkeep

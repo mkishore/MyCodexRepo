@@ -11,11 +11,7 @@ TIMEZONE = "Asia/Kolkata"
 
 
 def _default_raw_dir() -> Path:
-    return Path("outputs/raw")
 
-
-def _default_curated_dir() -> Path:
-    return Path("outputs/curated")
 
 
 @dataclass(slots=True)
