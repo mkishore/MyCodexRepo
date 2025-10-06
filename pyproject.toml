@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polymarket-leadlag"
+version = "0.1.0"
+description = "Analysis pipeline for Polymarket lead-lag vs Google Trends"
+readme = "README.md"
+authors = [{name = "Analyst", email = "analyst@example.com"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "requests>=2.31",
+    "httpx>=0.27",
+    "pytrends>=4.9",
+    "python-dateutil>=2.8",
+    "pytz>=2023.3",
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+    "plotly>=5.20",
+    "tqdm>=4.66"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
