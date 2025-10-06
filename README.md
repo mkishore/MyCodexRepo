@@ -6,9 +6,6 @@ This repository contains the scaffolding for an analysis that compares price and
 
 ```
 .
-├── data
-│   ├── curated/   # cleaned, structured datasets used for analysis
-│   └── raw/       # raw API pulls cached locally to avoid repeat calls
 ├── scripts
 │   └── run_analysis.py  # main entry point for the end-to-end workflow
 ├── src
@@ -29,12 +26,11 @@ This repository contains the scaffolding for an analysis that compares price and
 1. **Data Acquisition**
    - `polymarket_leadlag.data_api` handles communication with the Polymarket Gamma and Data APIs.
    - `polymarket_leadlag.google_trends` fetches Google Trends series via `pytrends`.
-   - Results are cached in `data/raw/`.
+
 
 2. **Processing**
    - `polymarket_leadlag.processing` converts API responses into hourly bars in the Asia/Kolkata timezone.
    - Missing hours are forward-filled for prices and reindexed for Trends data.
-   - Processed datasets are written to `data/curated/`.
 
 3. **Analysis**
    - `polymarket_leadlag.analysis` computes cross-correlations for lags between −48 and +48 hours.

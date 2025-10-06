@@ -24,7 +24,6 @@ from polymarket_leadlag.visualization import (
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("market_ids", nargs="*", help="Polymarket market IDs to analyze")
-    parser.add_argument("--output-dir", default="outputs", help="Directory to store charts and CSVs")
     parser.add_argument("--lookback-hours", type=int, default=30 * 24)
     parser.add_argument("--max-lag", type=int, default=48)
     parser.add_argument("--price-jump-sigma", type=float, default=2.0)
